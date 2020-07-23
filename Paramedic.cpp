@@ -3,7 +3,7 @@
 
 namespace WarGame{
 
-	void Paramedic::fire(std::pair<int,int> source,std::vector<std::vector<Soldier*>>& board) override{
+	void Paramedic::fire(std::pair<int,int> source,std::vector<std::vector<Soldier*>>& board){
 		for(int i = source.first-1;i<=source.first+1;i++){
 	        	for(int j = source.second-1;j<=source.second+1;j++){
 	                	if(i>=0 && i<board.size() && j>=0 && j<board[i].size()) {
