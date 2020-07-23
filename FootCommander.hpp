@@ -1,5 +1,5 @@
 #pragma once
-#include "FootCommander.hpp"
+#include "Soldier.hpp"
 
 namespace WarGame{
 
