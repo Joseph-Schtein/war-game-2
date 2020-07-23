@@ -3,7 +3,7 @@
 
 namespace WarGame{
 
-	void Sniper::fire(std::pair<int,int> source,std::vector<std::vector<Soldier*>>& board) override{
+	void Sniper::fire(std::pair<int,int> source,std::vector<std::vector<Soldier*>>& board) {
             std::pair<int,int> target = this->highest_hp(source,board);
             if(target.first==-1 && target.second==-1) return; // if there is'nt such a player - return
 

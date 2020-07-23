@@ -3,7 +3,7 @@
 namespace WarGame{
 
 
-  void ParamedicCommander::fire(std::pair<int,int> source,std::vector<std::vector<Soldier*>>& board) override{
+  	void ParamedicCommander::fire(std::pair<int,int> source,std::vector<std::vector<Soldier*>>& board){
             for(int i = source.first-1;i<=source.first+1;i++){
                 for(int j = source.second-1;j<=source.second+1;j++){
                     if(i>=0 && i<board.size() && j>=0 && j<board[i].size()) {
@@ -15,15 +15,15 @@ namespace WarGame{
                         }
                     }
                 }
-            }
-        for(int i = 0; i<board.size(); i++){
-            for(int j =0; j<board[i].size() ; j++){
-                if(board[i][j]!=nullptr && board[i][j]->player==board[source.first][source.second]->player){
-                    if(board[i][j]->max_hp==100 && board[i][j]->dmg==0){
-                        board[i][j]->fire({i,j},board);
-                    }
-                }
-                    
-            }
+             }
+        	for(int i = 0; i<board.size(); i++){
+       	     for(int j =0; j<board[i].size() ; j++){
+       	         if(board[i][j]!=nullptr && board[i][j]->player==board[source.first][source.second]->player){
+       	             if(board[i][j]->max_hp==100 && board[i][j]->dmg==0){
+       	                 board[i][j]->fire({i,j},board);
+               	     }
+               	 }
+                     }	     
+            	 }
         }
  }

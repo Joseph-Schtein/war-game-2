@@ -3,7 +3,7 @@
 
 namespace WarGame{
 
-	void FootCommander::fire(std::pair<int,int> source,std::vector<std::vector<Soldier*>>& board) override{
+	void FootCommander::fire(std::pair<int,int> source,std::vector<std::vector<Soldier*>>& board) {
             std::pair<int,int> target = this->closest_target(source,board);
             if(target.first==-1 && target.second==-1) return;
 
